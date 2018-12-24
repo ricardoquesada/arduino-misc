@@ -16,7 +16,8 @@ BSD license, check license.txt for more information
 All text above, and the splash screen must be included in any redistribution
 *********************************************************************/
 
-#define SSD1306_64_48
+// Make sure to use "Adafruit_SSD1306_Wemos_OLED" library,
+// and NOT "Adafruit_SSD1306"
 
 #include <SPI.h>
 #include <Wire.h>
@@ -54,9 +55,9 @@ static const unsigned char PROGMEM logo16_glcd_bmp[] =
   B01110000, B01110000,
   B00000000, B00110000 };
 
-//#if (SSD1306_LCDHEIGHT != 48)
-//#error("Height incorrect, please fix Adafruit_SSD1306.h!");
-//#endif
+#if (SSD1306_LCDHEIGHT != 48)
+#error("Height incorrect, please fix Adafruit_SSD1306.h!");
+#endif
 
 void setup()   {
   Serial.begin(9600);
