@@ -28,13 +28,22 @@ void led_set(uint8 R, uint8 G, uint8 B) {
 
 void loop() {
 
-  led_set(10, 0, 0);//red
+  led_set(255, 0, 0);//red
   led_set(0, 0, 0);
 
-  led_set(0, 10, 0);//green
+  led_set(255, 255, 0);//red+green
   led_set(0, 0, 0);
 
-  led_set(0, 0, 10);//blue
+  led_set(0, 255, 0);//green
   led_set(0, 0, 0);
 
+  led_set(0, 255, 255);//green+blue
+  led_set(0, 0, 0);
+
+  led_set(0, 0, 255);//blue
+  led_set(0, 0, 0);
+
+
+  led_set(255, 255, 255);//white
+  led_set(0, 0, 0);
 }
